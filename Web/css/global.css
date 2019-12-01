@@ -179,3 +179,19 @@ button:hover {
 	margin-right: 10px;
 }
 /* -------------------------- */
+
+
+/* Shared nav menu */
+/* -------------------- */
+#accoutOption .btn:first-of-type {
+	margin-right: 20px;
+}
+
+
+
+
+/* Lobby */
+#textPresentation  {
+	width: 80%;
+	margin: auto;
+}
