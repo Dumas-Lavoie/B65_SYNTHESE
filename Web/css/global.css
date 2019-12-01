@@ -149,8 +149,35 @@ button:hover {
 }
 
 
+.flexBoite {
+	display: flex;
+	color: white;
+}
 
+/* Sign-in page */
+/* --------------------------- */
+#signIn {
+	padding-top: 200px;
+	text-align: center;
+	width: 400px;
+	margin: auto;
+}
 
+#signIn p {
+	width: 400px;
+}
+
+#signIn h1 {
+	color: white;
+}
+
+#signIn button {
+	height: 40px;
+}
+
+.textColor {
+	color: white;
+}
 
 /* Login page */
 /* -------------------------- */

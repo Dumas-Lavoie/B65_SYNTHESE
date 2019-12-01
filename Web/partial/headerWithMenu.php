@@ -7,13 +7,13 @@ require_once("partial/header.php");
 	<nav class="my-2 my-md-0 mr-md-3">
 		<a class="p-2 text-dark" href="index.php">Accueil</a>
 		<a class="p-2 text-dark" href="features.php">Fonctionalités</a>
-		<a class="p-2 text-dark" href="#">Les camps</a>
+		<a class="p-2 text-dark" href="camps.php">Les camps</a>
 		<a class="p-2 text-dark" href="#">Postuler</a>
 	</nav>
 
 
 	<div id="accoutOption">
-		<a class="btn btn-outline-primary" href="#">Créer un compte</a>
+		<a class="btn btn-outline-primary" href="signIn.php">Créer un compte</a>
 		<a class="btn btn-outline-primary" href="login.php">Se connecter</a>
 	</div>
 
