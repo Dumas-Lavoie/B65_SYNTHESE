@@ -16,6 +16,7 @@ body {
 	background-image:url('../images/stars.jpg');
 	background-repeat:repeat-x;
 	background-position:top center;
+	height: 100vh;
 }
 
 h1 {
@@ -145,3 +146,36 @@ button {
 button:hover {
 	background-color:#bbb;
 }
+
+
+
+
+
+/* Login page */
+/* -------------------------- */
+#login {
+	padding-top: 200px;
+	text-align: center;
+	width: 200px;
+	margin: auto;
+}
+
+#login h1 {
+	color: white;
+}
+
+#login label {
+	color:	white;
+}
+
+#login button {
+	height: 40px;
+}
+
+#login input {
+	margin-bottom: 20px;
+}
+#login label  > input {
+	margin-right: 10px;
+}
+/* -------------------------- */
