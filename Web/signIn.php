@@ -22,7 +22,7 @@ require_once("partial/headerWithMenu.php");
 			</div>
 
 			<div>
-				<input type="radio" id="campInscType" name="drone" value="huey" checked>
+				<input type="radio" id="campInscType" name="drone" value="huey" onclick="showCorrectFields()">
 				<label for="campInscType">Camp</label>
 			</div>
 		</div>
@@ -56,8 +56,13 @@ require_once("partial/headerWithMenu.php");
 
 		<div id="animatorsSingInFields">
 			<form action="login.php" method="POST">
-
+			
 			</form>
 		</div>
 	</div>
 </div>
+
+<script src="js/signin.js"></script>
+<?php
+	require_once("partial/footer.php");
+?>
