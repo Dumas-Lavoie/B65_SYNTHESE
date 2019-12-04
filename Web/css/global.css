@@ -150,7 +150,9 @@ button:hover {
 
 
 .flexBoite {
+
 	display: flex;
+	align-items: center;
 	color: white;
 }
 
@@ -177,6 +179,11 @@ button:hover {
 
 .textColor {
 	color: white;
+}
+
+#inscrTRadio > div:first-child {
+	padding-left: 100px;
+	padding-right: 20px;
 }
 
 /* Login page */
