@@ -50,7 +50,7 @@ require_once("partial/headerWithMenu.php");
 
 
 					<div class="flexBoite">
-						<label for="inputPassword" class="sr-only">Nom d'utilisateur</label>
+						<label for="inputPassword" class="sr-only">Mot de passe</label>
 						<p>Mot de passe</p>
 						<input type="password" class="inputPassword" class="form-control" placeholder="Mot de passe" name="password" required="true">
 					</div>
@@ -59,8 +59,15 @@ require_once("partial/headerWithMenu.php");
 					<div class="flexBoite">
 						<label for="inputPassword" class="sr-only">Password</label>
 						<p>Répéter le mdp</p>
-						<input type="password" id="inputPassword" class="form-control" placeholder="Mot de passe" name="passwordReEnter" required="true">
+						<input type="password" id="inputPassword" class="form-control" placeholder="Réécrire le de passe" name="passwordReEnter" required="true">
 					</div>
+
+					<div class="flexBoite">
+						<label for="capcha" class="sr-only">Question mystère</label>
+						<p class="capcha">Que font 3 + 5?</p>
+						<input type="text" id="capcha" class="form-control" placeholder="Réponse" name="capcha1" required="true">
+					</div>
+
 				</div>
 				<button class="btn btn-lg btn-primary" type="submit">Inscription</button>
 				<p class="mt-5 mb-3 text-muted">© 2017-2019</p>
@@ -71,7 +78,7 @@ require_once("partial/headerWithMenu.php");
 		<div id="animatorsSingInFields">
 			<form action="login.php" method="POST">
 
-			<h5>Vous êtes un(e) animateur(trice)</h5>
+			<h5>Vous êtes un camp ou une base de plein air</h5>
 			</form>
 		</div>
 	</div>

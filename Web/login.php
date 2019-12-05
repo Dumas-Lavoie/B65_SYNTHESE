@@ -20,10 +20,10 @@ require_once("partial/headerWithMenu.php");
 		}
 		?>
 		<h1 class="h3 mb-3 font-weight-normal">Connexion</h1>
-		<label for="inputUsername" class="sr-only">Username</label>
-		<input type="t" id="inputUsername" class="form-control" placeholder="Username" name="username" required="true" autofocus="true" value="<?php echo isset($_COOKIE["remember-me"]) ? $_COOKIE["remember-me"] : "" ?>">
-		<label for="inputPassword" class="sr-only">Password</label>
-		<input type="password" id="inputPassword" class="form-control" placeholder="Password" name="password" required="true">
+		<label for="inputUsername" class="sr-only">Nom d'utilisateur</label>
+		<input type="t" id="inputUsername" class="form-control" placeholder="Nom d'utilisateur" name="username" required="true" autofocus="true" value="<?php echo isset($_COOKIE["remember-me"]) ? $_COOKIE["remember-me"] : "" ?>">
+		<label for="inputPassword" class="sr-only">Mot de passe</label>
+		<input type="password" id="inputPassword" class="form-control" placeholder="Mot de passe" name="password" required="true">
 		<div class="checkbox mb-3">
 			<label id="remember-me">
 				<input type="checkbox" value="remember-me" name="remember-me">Se souvenir</input>
