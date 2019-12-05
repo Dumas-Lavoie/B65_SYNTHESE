@@ -54,9 +54,10 @@ require_once("partial/headerWithMenu.php");
 			</form>
 		</div>
 
+		
 		<div id="animatorsSingInFields">
 			<form action="login.php" method="POST">
-			
+
 			</form>
 		</div>
 	</div>

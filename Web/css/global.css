@@ -17,7 +17,7 @@ body {
 	background-repeat:repeat-x;
 	background-position:top center;
 	background-size: cover;
-	height: 100vh;
+	height: 100%;
 }
 
 h1 {
