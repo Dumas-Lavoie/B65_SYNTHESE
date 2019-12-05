@@ -20,6 +20,12 @@ body {
 	height: 100%;
 }
 
+
+html, body {
+    margin: 0;
+    height: 100%;
+}
+
 h1 {
 	font-size: 1.3em;
 	text-shadow:2px 2px 5px #aaa;
@@ -186,6 +192,13 @@ button:hover {
 	padding-right: 20px;
 }
 
+.fields {
+	padding: 50px;
+	padding-left: 0px;
+	padding-right: 0px;
+}
+
+
 /* Login page */
 /* -------------------------- */
 #login {
@@ -232,6 +245,9 @@ button:hover {
 	margin: auto;
 }
 
+#frontPanel {
+
+}
 
 
 /* Features */
