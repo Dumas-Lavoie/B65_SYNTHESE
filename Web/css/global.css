@@ -1,3 +1,6 @@
+
+/* Global */
+/* --------------------- */
 * {
 	margin:0;
 	padding:0;
@@ -86,6 +89,10 @@ a:hover {
 	text-align:right;
 }
 
+body nav {
+	text-align: center;
+}
+
 .header .menu ul li {
 	display:inline;
 	padding-right:15px;
@@ -154,6 +161,10 @@ button:hover {
 	background-color:#bbb;
 }
 
+#accoutOption a {
+	margin-top: 5px;
+}
+
 
 .flexBoite {
 
@@ -165,7 +176,7 @@ button:hover {
 /* Sign-in page */
 /* --------------------------- */
 #signIn {
-	padding-top: 200px;
+	padding-top: 48px;
 	text-align: center;
 	width: 400px;
 	margin: auto;
