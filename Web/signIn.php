@@ -16,19 +16,18 @@ require_once("partial/headerWithMenu.php");
 
 		<div id="inscrTRadio" class="flexBoite">
 			<div>
-				<input type="radio" id="animInscType" name="drone" value="huey" checked>
+				<input type="radio" id="animInscType" name="drone" value="huey" onclick="showRightField();" checked>
 				<label for="animInscType">Animateur</label>
 			</div>
 
 			<div>
-				<input type="radio" id="campInscType" name="drone" value="huey" onclick="showCorrectFields()">
+				<input type="radio" id="campInscType" name="drone" value="huey" onclick="showRightField();">
 				<label for="campInscType">Camp</label>
 			</div>
 		</div>
 
-		<div id="campSingInFields">
+		<div id="animatorsSingInFields">
 			<form action="login.php" method="POST">
-
 
 				<div class="fields">
 
@@ -75,7 +74,7 @@ require_once("partial/headerWithMenu.php");
 		</div>
 
 
-		<div id="animatorsSingInFields">
+		<div id="campSingInFields">
 			<form action="login.php" method="POST">
 
 			<h5>Vous êtes un camp ou une base de plein air</h5>
