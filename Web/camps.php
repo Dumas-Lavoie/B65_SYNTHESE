@@ -1,7 +1,7 @@
 <?php
-require_once("action/IndexAction.php");
+require_once("action/CampAction.php");
 
-$action = new IndexAction();
+$action = new CampAction();
 $action->execute();
 
 require_once("partial/headerWithMenu.php");

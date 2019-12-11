@@ -16,17 +16,19 @@ html {
 
 body {
 	font-family:Verdana;
-	background-image:url('../images/stars.jpg');
 	background-repeat:repeat-x;
-	background-position:top center;
 	background-size: cover;
-	height: 100%;
+
+	background: url('../images/stars.jpg') no-repeat center center fixed; 
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
 }
 
 
 html, body {
     margin: 0;
-    height: 100%;
 }
 
 h1 {
@@ -57,10 +59,8 @@ a:hover {
 	background-color:white;
 	width:930px;
 	min-height:350px;
-	margin:5px auto;
 	border:1px solid #6b5736;
 	padding:15px;
-	background-image:url('../images/coffee-grain.jpg');
 	background-repeat:no-repeat;
 	background-position:bottom right;
 	box-shadow: 0 0 15px #000;
@@ -219,6 +219,10 @@ button:hover {
 	margin: auto;
 }
 
+.animatorFields {
+	margin: auto;
+}
+
 #login h1 {
 	color: white;
 }
@@ -266,3 +270,4 @@ button:hover {
 .jumbotron {
 	background-color: rgba(0,0,0,0);
 }
+
