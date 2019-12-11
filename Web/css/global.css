@@ -189,6 +189,12 @@ button:hover {
   text-align: center;
   border: solid;
   padding: 50px;
+  margin-bottom: 30px;
+}
+
+.signInPage .type {
+  margin-left: 20px;
+  width: 20vw;
 }
 
 #signIn p {

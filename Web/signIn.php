@@ -1,33 +1,8 @@
-<script>
-	// <!DOCTYPE html>
-	// <!-- saved from url=(0052)https://getbootstrap.com/docs/4.0/examples/checkout/ -->
-	// <html lang="en">
-
-	// <head>
-	// 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-
-	// 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	// 	<meta name="description" content="">
-	// 	<meta name="author" content="">
-	// 	<link rel="icon" href="https://getbootstrap.com/docs/4.0/assets/img/favicons/favicon.ico">
-
-	// 	<title>Checkout example for Bootstrap</title>
-
-	// 	<link rel="canonical" href="https://getbootstrap.com/docs/4.0/examples/checkout/">
-
-	// 	<link rel="stylesheet" type="text/css" href="css/global.css">
-
-	// 	<!-- Bootstrap core CSS -->
-	// 	<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-	// 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"><script>
-
-	// 	<!-- Custom styles for this template -->
-	// 	<link href="./Checkout example for Bootstrap_files/form-validation.css" rel="stylesheet">
-</script>
-
 <?php
 
-require_once("partial/headerWithMenu.php");
+
+
+	require_once("partial/headerWithMenu.php");
 ?>
 
 
@@ -52,7 +27,7 @@ require_once("partial/headerWithMenu.php");
 		<div class="row animatorInscription">
 
 			<div class="col-md-8 order-md-1 animatorFields">
-				<h4 class="mb-3">Billing address</h4>
+				<h4 class="mb-3">Informations -Animateur/trice</h4>
 				<form class="needs-validation" novalidate="">
 					<div class="row">
 						<div class="col-md-6 mb-3">
