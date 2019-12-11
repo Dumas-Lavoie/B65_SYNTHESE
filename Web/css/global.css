@@ -197,6 +197,10 @@ button:hover {
   width: 20vw;
 }
 
+.signInPage button {
+  height: auto;
+}
+
 #signIn p {
   width: 50vw;
 }
@@ -249,7 +253,7 @@ button:hover {
 }
 
 .loginForm .form-signin {
-  background-color: lightgrey;
+  background-color: rgba(200, 200, 200, 0.9);
   -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
           box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   border: 5px black;
