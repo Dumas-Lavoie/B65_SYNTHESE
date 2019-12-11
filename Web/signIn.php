@@ -1,32 +1,31 @@
-<script>  
-// <!DOCTYPE html>
-// <!-- saved from url=(0052)https://getbootstrap.com/docs/4.0/examples/checkout/ -->
-// <html lang="en">
+<script>
+	// <!DOCTYPE html>
+	// <!-- saved from url=(0052)https://getbootstrap.com/docs/4.0/examples/checkout/ -->
+	// <html lang="en">
 
-// <head>
-// 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	// <head>
+	// 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
-// 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-// 	<meta name="description" content="">
-// 	<meta name="author" content="">
-// 	<link rel="icon" href="https://getbootstrap.com/docs/4.0/assets/img/favicons/favicon.ico">
+	// 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	// 	<meta name="description" content="">
+	// 	<meta name="author" content="">
+	// 	<link rel="icon" href="https://getbootstrap.com/docs/4.0/assets/img/favicons/favicon.ico">
 
-// 	<title>Checkout example for Bootstrap</title>
+	// 	<title>Checkout example for Bootstrap</title>
 
-// 	<link rel="canonical" href="https://getbootstrap.com/docs/4.0/examples/checkout/">
+	// 	<link rel="canonical" href="https://getbootstrap.com/docs/4.0/examples/checkout/">
 
-// 	<link rel="stylesheet" type="text/css" href="css/global.css">
+	// 	<link rel="stylesheet" type="text/css" href="css/global.css">
 
-// 	<!-- Bootstrap core CSS -->
-// 	<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-// 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"><script>
+	// 	<!-- Bootstrap core CSS -->
+	// 	<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	// 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"><script>
 
-// 	<!-- Custom styles for this template -->
-// 	<link href="./Checkout example for Bootstrap_files/form-validation.css" rel="stylesheet">
+	// 	<!-- Custom styles for this template -->
+	// 	<link href="./Checkout example for Bootstrap_files/form-validation.css" rel="stylesheet">
+</script>
 
-	</script>
-
-<?php 
+<?php
 
 require_once("partial/headerWithMenu.php");
 ?>
@@ -35,13 +34,19 @@ require_once("partial/headerWithMenu.php");
 
 <body class="bg-light">
 
-	<div class="container">
+	<div class="container signInPage">
 		<div class="py-5 text-center">
-			
 			<h2>Inscription</h2>
 			<p class="lead">Ce formulaire sert à s'inscrire sur camp job finder. Peu importe le type de camp, vous trouverez votre compte!</p>
 		</div>
 
+		<div class="dropDownChoice">
+			<div>Êtes-vous un animateur(trice) ou un camp?</div>
+			<select name="registerkind">
+				<option value="animator">Animateur/trice</option>
+				<option value="camp">Camp ou base de plein air</option>
+			</select>
+		</div>
 		<div class="row">
 
 			<div class="col-md-8 order-md-1 animatorFields">

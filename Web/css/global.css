@@ -182,6 +182,15 @@ button:hover {
   margin: auto;
 }
 
+.signInPage .dropDownChoice {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: center;
+  border: solid;
+  padding: 50px;
+}
+
 #signIn p {
   width: 50vw;
 }
@@ -234,6 +243,10 @@ button:hover {
 }
 
 .loginForm .form-signin {
+  background-color: lightgrey;
+  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border: 5px black;
   width: 100%;
   max-width: 330px;
   padding: 15px;
@@ -267,6 +280,10 @@ button:hover {
   margin-bottom: 10px;
   border-top-left-radius: 0;
   border-top-right-radius: 0;
+}
+
+.loginForm button {
+  height: 60px;
 }
 
 .animatorFields {

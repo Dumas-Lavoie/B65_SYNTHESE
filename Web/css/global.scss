@@ -187,6 +187,15 @@ button:hover {
 	margin: auto;
 }
 
+.signInPage {
+	.dropDownChoice {
+		display: flex;
+		text-align: center;
+		border: solid;
+		padding: 50px;
+	}
+}
+
 #signIn p {
 	width: 50vw;
 }
@@ -226,6 +235,7 @@ button:hover {
 
 // Bootstrap custom css 
 .loginForm {
+	
 	body {
 		display: -ms-flexbox;
 		display: -webkit-box;
@@ -242,6 +252,9 @@ button:hover {
 	  }
 	  
 	  .form-signin {
+		background-color: lightgrey;
+		box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+		border: 5px black;
 		width: 100%;
 		max-width: 330px;
 		padding: 15px;
@@ -269,6 +282,10 @@ button:hover {
 		margin-bottom: 10px;
 		border-top-left-radius: 0;
 		border-top-right-radius: 0;
+	  }
+
+	  button {
+		  height: 60px;
 	  }
 
 
