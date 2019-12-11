@@ -56,7 +56,7 @@
 
 					<div class="mb-3">
 						<label for="address">Adresse</label>
-						<input type="text" class="form-control" id="address" name="address" placeholder="" required="">
+						<input type="text" class="form-control" id="address" name="address" placeholder="Adresse" required="">
 						<div class="invalid-feedback">
 							Svp veuillez entrer votre adresse.
 						</div>
