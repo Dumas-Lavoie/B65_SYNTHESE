@@ -2,20 +2,26 @@
 
 
 
-
-
+// Exemple tiré d'internet.
+// Si un changement dans le select est détecté, les fonctions sont apellées 
+$("select.type").change(function(){
+	selection =$(this).children("option:selected").val();
+	showRightField(selection);
+});
 
 
 //  Show the right field when user is signing in:
 
-showRightField = () => {
-	if ( $('#animInscType').is(':checked'))
+showRightField = (selection) => {
+
+	if (selection == "animator")
 	{
 		$('#campSingInFields').css("display", "none");
-		$('#animatorsSingInFields').css("display", "block");
+		$('.animatorInscription').css("display", "block");
 	}
 	else {
-		$('#animatorsSingInFields').css("display", "none");
+		$('.animatorInscription').css("display", "none");
 		$('#campSingInFields').css("display", "block");
 	}
 };
+

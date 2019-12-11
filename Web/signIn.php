@@ -42,12 +42,14 @@ require_once("partial/headerWithMenu.php");
 
 		<div class="dropDownChoice">
 			<div>Êtes-vous un animateur(trice) ou un camp?</div>
-			<select name="registerkind">
+			<select name="registerkind" class="type">
 				<option value="animator">Animateur/trice</option>
 				<option value="camp">Camp ou base de plein air</option>
 			</select>
 		</div>
-		<div class="row">
+
+
+		<div class="row animatorInscription">
 
 			<div class="col-md-8 order-md-1 animatorFields">
 				<h4 class="mb-3">Billing address</h4>
@@ -199,16 +201,11 @@ require_once("partial/headerWithMenu.php");
 		</div>
 
 		<footer class="my-5 pt-5 text-muted text-center text-small">
-			<p class="mb-1">© 2017-2018 Company Name</p>
-			<ul class="list-inline">
-				<li class="list-inline-item"><a href="https://getbootstrap.com/docs/4.0/examples/checkout/#">Privacy</a></li>
-				<li class="list-inline-item"><a href="https://getbootstrap.com/docs/4.0/examples/checkout/#">Terms</a></li>
-				<li class="list-inline-item"><a href="https://getbootstrap.com/docs/4.0/examples/checkout/#">Support</a></li>
-			</ul>
+			<p class="mb-1">© 2019 Félix Dumas-Lavoie</p>
 		</footer>
 	</div>
 
-
+	<script src="js/signIn.js"></script>
 </body>
 
 </html>
