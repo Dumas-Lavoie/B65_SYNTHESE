@@ -7,8 +7,6 @@ require_once("partial/header.php");
 	<nav class="my-2 my-md-0 mr-md-3">
 		<a class="p-2 text-dark" href="index.php">Accueil</a>
 		<a class="p-2 text-dark" href="features.php">Fonctionalités</a>
-		<a class="p-2 text-dark" href="camps.php">Les camps</a>
-		<a class="p-2 text-dark" href="#">Postuler</a>
 	</nav>
 
 

@@ -18,10 +18,12 @@ showRightField = (selection) => {
 	{
 		$('#campSingInFields').css("display", "none");
 		$('.animatorInscription').css("display", "block");
+		$("body").css("height", "auto");
 	}
 	else {
 		$('.animatorInscription').css("display", "none");
 		$('#campSingInFields').css("display", "block");
+		$("body").css("height", "100vh");
 	}
 };
 

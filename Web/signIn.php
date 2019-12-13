@@ -2,7 +2,7 @@
 
 
 
-	require_once("partial/headerWithMenu.php");
+require_once("partial/headerWithMenu.php");
 ?>
 
 
@@ -78,7 +78,7 @@
 								Please select a valid country.
 							</div>
 						</div>
-						
+
 						<div class="col-md-3 mb-3">
 							<label for="zip">Code postal</label>
 							<input type="text" class="form-control" id="zip" name="zipCode" placeholder="Code postal" required="">
@@ -111,16 +111,18 @@
 								Le mot de passe est requis
 							</div>
 						</div>
-					<button class="btn btn-primary btn-lg btn-block" type="submit">S'inscire</button>
+						<button class="btn btn-primary btn-lg btn-block" type="submit">S'inscire</button>
 				</form>
 			</div>
 		</div>
 
-		<footer class="my-5 pt-5 text-muted text-center text-small">
-			<p class="mb-1">© 2019 Félix Dumas-Lavoie</p>
-		</footer>
+
 	</div>
 
+	<footer class="my-5 pt-5 text-muted text-center text-small">
+		<p class="mb-1">© 2019 Félix Dumas-Lavoie</p>
+	</footer>
+	
 	<script src="js/signIn.js"></script>
 </body>
 
