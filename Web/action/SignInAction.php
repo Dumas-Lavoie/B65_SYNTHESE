@@ -39,5 +39,8 @@
 				// 	$this->wrongLogin = true;
 				// }
 			}
+			else {
+				$_SESSION["test"] = "ALO";
+			}
 		}
 	}

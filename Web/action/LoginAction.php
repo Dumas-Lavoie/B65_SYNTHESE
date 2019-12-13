@@ -11,8 +11,8 @@
 
 		protected function executeAction() {
 
-			if (isset($_POST["username"])) {
-				$user = UserDAO::authenticate($_POST["username"], $_POST["pwd"]);
+			if (isset($_POST["email"]) and isset($_POST["password"])) {
+				$user = UserDAO::authenticate($_POST["email"], $_POST["password"]);
 
 				if (!empty($user)) {
 					$_SESSION["username"] = $user["USERNAME"];

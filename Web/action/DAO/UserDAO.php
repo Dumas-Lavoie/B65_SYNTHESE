@@ -6,22 +6,20 @@
 
 		public static function authenticate($username, $password) {
 			$user = null;
-
 			$connection = Connection::getConnection();
 
-			$statement = $connection->prepare("SELECT * from users where username = ?");
+			$statement = $connection->prepare("SELECT * from Users where email = ?");
 			$statement->bindParam(1, $username);
 			$statement->setFetchMode(PDO::FETCH_ASSOC); // row["USERNAME"]
 			$statement->execute();
 
 			if ($row = $statement->fetch()) {
-				if (password_verify($password, $row["PASSWORD"])) {
+				if (password_verify($password, $row["passwordHash"])) {
 					$user = [];
-					$user["USERNAME"] = $row["FIRST_NAME"];
-					$user["VISIBILITY"] = $row["VISIBILITY"];
+					$user["userId"] = $row["id"];
+					$user["VISIBILITY"] = $row["typeUsager"];
 				}
 			}
-
 			return $user;
 		}
 
