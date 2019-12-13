@@ -21,7 +21,8 @@ body {
   background-size: cover;
 }
 
-html, body {
+html,
+body {
   margin: 0;
 }
 
@@ -327,11 +328,21 @@ button:hover {
   margin-right: 20px;
 }
 
-/* Lobby */
+/* Lobby / index */
 /* ----------------- */
-#textPresentation {
+.index #textPresentation {
   width: 80%;
   margin: auto;
+}
+
+.index button {
+  width: 200px;
+  height: 43px;
+}
+
+.index .group {
+  margin-bottom: 0 !important;
+  background-color: rgba(222, 222, 222, 0.9);
 }
 
 /* Features */
