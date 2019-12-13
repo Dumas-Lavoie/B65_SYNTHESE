@@ -1,12 +1,13 @@
 -- CREATE DATABASE IF NOT EXISTS CampDB;
 USE felixdl;
 
+DROP TABLE Users;
+
+
 CREATE  TABLE IF NOT EXISTS Users (
   id INT AUTO_INCREMENT PRIMARY KEY,
   typeUsager CHAR(1) NOT NULL,
   creationDate DATE NOT NULL ,
-  adresse VARCHAR(150) NOT NULL ,
-  nom VARCHAR(255) ,
   email VARCHAR(255) ,
   passwordHash CHAR(255)
   )
@@ -19,7 +20,6 @@ CREATE  TABLE IF NOT EXISTS Camps (
   adresse VARCHAR(150) NOT NULL ,
   postal_address VARCHAR(255) ,
   contact_number VARCHAR(75) ,
-  email VARCHAR(255) ,
   FOREIGN KEY (fk_id_users) REFERENCES Users(id)
  )
 ENGINE = InnoDB;
@@ -34,8 +34,7 @@ CREATE  TABLE IF NOT EXISTS Animateur (
   date_of_birth DATE ,
   physical_address VARCHAR(255) ,
   postal_address VARCHAR(255) ,
-  contact_number VARCHAR(75) ,
-  email VARCHAR(255)
+  contact_number VARCHAR(75)
   )
 ENGINE = InnoDB;
 

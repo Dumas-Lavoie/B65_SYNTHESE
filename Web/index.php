@@ -10,6 +10,7 @@ require_once("partial/headerWithMenu.php");
 <div class="index">
 	<div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-light">
 		<div class="col-md-5 p-lg-5 mx-auto my-5">
+			<img src="images/campFireColor.png" width="100px" height="100px">	
 			<h1 class="display-3 font-weight-normal">C'est</h1>
 			<p class="lead font-weight-normal">la meilleure façon de travailler dans un super camp rapidement!</p>
 			<a class="btn btn-outline-primary" href="signIn">S'inscrire</a>

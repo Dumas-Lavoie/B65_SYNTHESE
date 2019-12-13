@@ -1,5 +1,6 @@
 <?php
 	require_once("action/DAO/Connection.php");
+	require_once("action/User.php");
 
 	class UserDAO {
 
@@ -30,6 +31,22 @@
 			$statement = $connection->prepare("UPDATE users SET password = ? where username = ?");
 			$statement->bindParam(1, $newPassword);
 			$statement->bindParam(2, $username);
+			$statement->execute();
+		}
+
+
+
+
+		public static function createAccount(User $user) {
+
+			$connection = Connection::getConnection();
+
+			$statement = $connection->prepare("INSERT INTO Users (typeUsager, CreationDate, email, passwordHash)
+			VALUES( ?, ?, ?, ?)");
+			$statement->bindParam(1, $user->userTypes);
+			$statement->bindParam(2, $user->creationDate);
+			$statement->bindParam(3, $user->email);
+			$statement->bindParam(4, $user->passwordHash);
 			$statement->execute();
 		}
 	}

@@ -254,7 +254,7 @@ button:hover {
 }
 
 .loginForm .form-signin {
-  background-color: rgba(200, 200, 200, 0.9);
+  background-color: #c8c8c8;
   -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
           box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   border: 5px black;
@@ -295,6 +295,12 @@ button:hover {
 
 .loginForm button {
   height: 60px;
+}
+
+@media (orientation: portrait) {
+  .loginForm body {
+    height: auto !important !important;
+  }
 }
 
 .animatorFields {

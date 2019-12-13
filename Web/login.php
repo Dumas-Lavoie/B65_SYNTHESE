@@ -11,7 +11,7 @@ require_once("partial/headerWithMenu.php");
 
 	<body class="text-center">
 		<form class="form-signin">
-			<img class="mb-4" src="images/logo.png" alt="" width="150" height="72">
+			<img src="images/campFireColor.png" width="100px" height="100px">	
 			<h1 class="h3 mb-3 font-weight-normal">Connexion</h1>
 			<label for="inputEmail" class="sr-only">Courriel</label>
 			<input type="email" id="inputEmail" class="form-control" placeholder="Adresse courriel" required autofocus>
