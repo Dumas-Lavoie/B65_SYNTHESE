@@ -24,7 +24,7 @@
 				
 				$hash = password_hash($_POST["password1"], PASSWORD_DEFAULT);
 
-				$user = new User('a',date("Y-m-d H:i:s"),$_POST["email"], $hash);
+				$user = new User(1,date("Y-m-d H:i:s"),$_POST["email"], $hash);
 
 				UserDAO::createAccount($user);
 

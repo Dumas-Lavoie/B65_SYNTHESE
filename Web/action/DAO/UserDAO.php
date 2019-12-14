@@ -37,7 +37,7 @@
 
 			$connection = Connection::getConnection();
 
-			$statement = $connection->prepare("INSERT INTO User (typeUsager, CreationDate, email, passwordHash)
+			$statement = $connection->prepare("INSERT INTO User (visibility, CreationDate, email, passwordHash)
 			VALUES( ?, ?, ?, ?)");
 			$statement->bindParam(1, $user->userTypes);
 			$statement->bindParam(2, $user->creationDate);

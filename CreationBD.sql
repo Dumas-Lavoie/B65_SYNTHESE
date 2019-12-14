@@ -3,7 +3,7 @@ USE felixdl;
 
 CREATE  TABLE IF NOT EXISTS User (
   id INT AUTO_INCREMENT PRIMARY KEY,
-  typeUsager CHAR(1) NOT NULL,
+  visibility TINYINT(1) NOT NULL,
   creationDate DATE NOT NULL ,
   email VARCHAR(255) ,
   passwordHash CHAR(255)
@@ -14,7 +14,7 @@ CREATE  TABLE IF NOT EXISTS Camp (
   id INT  AUTO_INCREMENT PRIMARY KEY,
   fk_id_User INT,
   nom VARCHAR(150) NOT NULL ,
-  grade TINYINT ,
+  grade TINYINT(1) ,
   adresse VARCHAR(150) NOT NULL ,
   postal_address VARCHAR(255) ,
   contact_number VARCHAR(75) ,
@@ -65,10 +65,8 @@ ENGINE = InnoDB;
 CREATE  TABLE IF NOT EXISTS CampTags (
   id INT  AUTO_INCREMENT PRIMARY KEY ,
   typeCamp VARCHAR(255)
-  -- FOREIGN KEY (fk_id_CampKind) REFERENCES CampKind(id)
   )
 ENGINE = InnoDB;
-
 
 CREATE  TABLE IF NOT EXISTS linkinTable (
   id INT  AUTO_INCREMENT  PRIMARY KEY,
