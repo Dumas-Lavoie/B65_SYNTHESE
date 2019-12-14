@@ -7,14 +7,14 @@ require_once("partial/header.php");
 <h5 class="my-0 mr-md-auto font-weight-normal">Camp job finder</h5>
 	
 	<nav class="my-2 my-md-0 mr-md-3">
-		<a class="p-2 text-dark" href="index.php">Accueil</a>
-		<a class="p-2 text-dark" href="features.php">Fonctionalités</a>
+		<a class="p-2 text-dark" href="index">Accueil</a>
+		<a class="p-2 text-dark" href="features">Fonctionalités</a>
 	</nav>
 
 
 	<div id="accoutOption">
-		<a class="btn btn-outline-primary" href="signIn.php">Créer un compte</a>
-		<a class="btn btn-outline-primary" href="login.php">Se connecter</a>
+		<a class="btn btn-outline-primary" href="signIn">Créer un compte</a>
+		<a class="btn btn-outline-primary" href="login">Se connecter</a>
 	</div>
 
 
