@@ -8,7 +8,7 @@
 			$user = null;
 			$connection = Connection::getConnection();
 
-			$statement = $connection->prepare("SELECT * from Users where email = ?");
+			$statement = $connection->prepare("SELECT * from User where email = ?");
 			$statement->bindParam(1, $username);
 			$statement->setFetchMode(PDO::FETCH_ASSOC); // row["USERNAME"]
 			$statement->execute();
@@ -26,20 +26,18 @@
 		public static function updatePassword($username, $newPassword) {
 			$connection = Connection::getConnection();
 
-			$statement = $connection->prepare("UPDATE users SET password = ? where username = ?");
+			$statement = $connection->prepare("UPDATE User SET password = ? where username = ?");
 			$statement->bindParam(1, $newPassword);
 			$statement->bindParam(2, $username);
 			$statement->execute();
 		}
 
 
-
-
 		public static function createAccount(User $user) {
 
 			$connection = Connection::getConnection();
 
-			$statement = $connection->prepare("INSERT INTO Users (typeUsager, CreationDate, email, passwordHash)
+			$statement = $connection->prepare("INSERT INTO User (typeUsager, CreationDate, email, passwordHash)
 			VALUES( ?, ?, ?, ?)");
 			$statement->bindParam(1, $user->userTypes);
 			$statement->bindParam(2, $user->creationDate);
