@@ -356,4 +356,24 @@ button:hover {
 .jumbotron {
   background-color: rgba(0, 0, 0, 0);
 }
+
+/* Search page */
+#connectedOptions {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+}
+
+#connectedOptions:first-of-type a {
+  padding-bottom: 10px;
+}
+
+#connectedOptions a {
+  color: black;
+}
 /*# sourceMappingURL=global.css.map */

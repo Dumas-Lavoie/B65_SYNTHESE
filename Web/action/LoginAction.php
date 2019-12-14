@@ -15,10 +15,10 @@
 				$user = UserDAO::authenticate($_POST["email"], $_POST["password"]);
 
 				if (!empty($user)) {
-					$_SESSION["username"] = $user["USERNAME"];
-					$_SESSION["visibility"] = $user["VISIBILITY"];
+					$_SESSION["username"] = $user["email"];
+					$_SESSION["visibility"] = $user["userTypes"];
 
-					header("location:home.php");
+					header("location:afdadf");
 					exit;
 				}
 				else {

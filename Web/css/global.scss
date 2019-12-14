@@ -357,3 +357,20 @@ button:hover {
 .jumbotron {
   background-color: rgba(0, 0, 0, 0);
 }
+
+
+/* Search page */
+// Animator Search page
+#connectedOptions {
+	display: flex; 
+	flex-direction:column;
+	text-align: center;
+
+	&:first-of-type a {
+		padding-bottom: 10px;
+	}
+
+	a {
+		color: black;
+	}
+}
