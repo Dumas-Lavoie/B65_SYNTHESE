@@ -20,3 +20,4 @@ require_once("partial/header.php");
         
 		<a class="btn btn-outline-danger" href="logout">Se déconnecter</a>
 	</div>
+</div>

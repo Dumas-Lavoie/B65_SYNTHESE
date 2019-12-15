@@ -376,4 +376,46 @@ button:hover {
 #connectedOptions a {
   color: black;
 }
+
+.dropDown {
+  padding-top: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.dropDown p:first-of-type {
+  padding-right: 20px;
+}
+
+.dropDown select {
+  width: 150px;
+  height: 20px;
+  margin-top: 10px;
+}
+
+.searchPannel {
+  padding: 50px;
+  padding-top: 10px;
+}
+
+.searchInside {
+  border: solid;
+  border-color: black;
+}
+
+button:first-of-type {
+  margin: auto !important;
+  margin-top: 200px;
+  width: 150px;
+  height: 50px;
+}
+
+#miniBio {
+  width: 100%;
+}
 /*# sourceMappingURL=global.css.map */

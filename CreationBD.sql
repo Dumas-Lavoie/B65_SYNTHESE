@@ -16,7 +16,7 @@ CREATE  TABLE IF NOT EXISTS Camp (
   nom VARCHAR(150) NOT NULL ,
   grade TINYINT(1) ,
   adresse VARCHAR(150) NOT NULL ,
-  postal_address VARCHAR(255) ,
+  postal_code VARCHAR(255) ,
   contact_number VARCHAR(75) ,
   description VARCHAR(512) NOT NULL,
   FOREIGN KEY (fk_id_User) REFERENCES User(id)
@@ -39,7 +39,7 @@ CREATE  TABLE IF NOT EXISTS Animateur (
   antecedents CHAR(1) ,
   date_of_birth DATE ,
   profilePicture VARCHAR(255),
-  description VARCHAR(512) NOT NULL,
+  description VARCHAR(512),
   physical_address VARCHAR(255) ,
   postal_address VARCHAR(255) ,
   contact_number VARCHAR(75)

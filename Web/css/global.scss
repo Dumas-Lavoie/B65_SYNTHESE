@@ -373,4 +373,42 @@ button:hover {
 	a {
 		color: black;
 	}
+	
+}
+
+.dropDown {
+	padding-top: 20px;
+	display: flex; 
+	flex-direction:row;
+
+	& p:first-of-type{
+		padding-right: 20px;
+	}
+
+	& select {
+		width: 150px;
+		height: 20px;
+		margin-top: 10px;
+	}
+}
+
+.searchPannel {
+	padding: 50px;
+	padding-top: 10px;
+}
+
+.searchInside {
+	border: solid;
+	border-color: black;
+}
+
+button:first-of-type {
+	margin: auto !important;
+	margin-top: 200px;
+	width: 150px;
+	height: 50px;
+}
+
+#miniBio {
+	width: 100%;
 }
