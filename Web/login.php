@@ -10,8 +10,19 @@ require_once("partial/headerWithMenu.php");
 <div class="loginForm">
 
 	<body class="text-center">
+
+	<?php
+        if ($action->wrongLogin) {
+            ?>
+            <div class="alert alert-danger">
+                <strong>Erreur de connexion</strong>
+            </div>
+        <?php
+		}
+		?>
+
 		<form class="form-signin" action="login.php" method="POST" >
-			<img src="images/campFireColor.png" width="100px" height="100px">	
+			<img src="images/campFireColor.png" width="100px" height="100px">
 			<h1 class="h3 mb-3 font-weight-normal">Connexion</h1>
 			<label for="inputEmail" class="sr-only">Courriel</label>
 			<input type="email" id="inputEmail" name="email" class="form-control" placeholder="Adresse courriel" required autofocus>

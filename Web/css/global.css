@@ -393,7 +393,7 @@ button:hover {
 }
 
 .dropDown select {
-  width: 150px;
+  width: 50%;
   height: 20px;
   margin-top: 10px;
 }
