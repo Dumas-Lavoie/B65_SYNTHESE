@@ -56,6 +56,7 @@ CREATE  TABLE IF NOT EXISTS JobOffer (
   id INT  AUTO_INCREMENT PRIMARY KEY ,
   fk_id_Camp INT,
   fk_id_Clientele INT,
+  creationDate DATE NOT NULL,
   description VARCHAR(512) NOT NULL,
   FOREIGN KEY (fk_id_Camp) REFERENCES Camp(id),
   FOREIGN KEY (fk_id_Clientele) REFERENCES Clientele(id)
@@ -64,7 +65,8 @@ ENGINE = InnoDB;
 
 CREATE  TABLE IF NOT EXISTS CampTags (
   id INT  AUTO_INCREMENT PRIMARY KEY ,
-  typeCamp VARCHAR(255)
+  typeCamp VARCHAR(255),
+  UNIQUE(typeCamp)
   )
 ENGINE = InnoDB;
 
@@ -87,3 +89,5 @@ CREATE  TABLE IF NOT EXISTS CurrentApplys (
   FOREIGN KEY (fk_id_Animateur) REFERENCES Animateur(id)
   )
 ENGINE = InnoDB;
+
+
