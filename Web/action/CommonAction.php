@@ -6,7 +6,7 @@
 		protected static $VISIBILITY_PUBLIC = 0;
 		protected static $VISIBILITY_MEMBER = 1;
 		protected static $VISIBILITY_MODERATOR = 2;
-		protected static $VISIBILITY_ADMIN = 3;
+		protected static $VISIBILITY_ADMIN = 4;
 
 		private $pageVisibility;
 
@@ -26,7 +26,7 @@
 				$_SESSION["visibility"] = CommonAction::$VISIBILITY_PUBLIC;
 			}
 
-			if ($_SESSION["visibility"] != $this->pageVisibility) {
+			if ($_SESSION["visibility"] != $this->pageVisibility and $this->pageVisibility != CommonAction::$VISIBILITY_PUBLIC) {
 				unset($_SESSION["userEmail"]);
 				$_SESSION["visibility"] = CommonAction::$VISIBILITY_PUBLIC;
 				header("location:index");

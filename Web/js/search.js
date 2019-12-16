@@ -1,0 +1,35 @@
+
+
+$(document).ready(() => {
+    getCampTags();
+    getClientele();
+});
+
+
+const getCampTags = () => {
+    $.ajax({
+        type: "POST",
+        url: "getCampTags.php"
+    }).done(response => {
+        response = JSON.parse(response);
+
+        for (let index = 0; index < response.length; index++) {
+            const nom = response[index].typeCamp;
+            $(".selectCampType").append("<option value=\""+ nom +"\">" + nom + "</option>");
+        }
+    });
+};
+
+const getClientele = () => {
+    $.ajax({
+        type: "POST",
+        url: "getClientele.php"
+    }).done(response => {
+        response = JSON.parse(response);
+
+        for (let index = 0; index < response.length; index++) {
+            const nom = response[index].clientele;
+            $(".selectClientele").append("<option>" + nom + "</option>");
+        }
+    });
+};

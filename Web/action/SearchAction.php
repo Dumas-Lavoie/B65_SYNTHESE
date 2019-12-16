@@ -1,6 +1,7 @@
 <?php
-	require_once("action/CommonAction.php");
-
+    require_once("action/CommonAction.php");
+    require_once("action/DAO/CampTagsDAO.php");
+    require_once("action/DAO/ClienteleDAO.php");
 
 	class SearchAction extends CommonAction {
 		public $wrongLogin = false;
@@ -10,6 +11,12 @@
 		}
 
 		protected function executeAction() {
+
+            if(!isset($_POST['lst_clientele']) or !isset($_POST['lst_tagsCamp']))
+            {
+                $_POST['lst_clientele'] = ClienteleDAO::getClientele();
+                $_POST['lst_tagsCamp'] = CampTagsDAO::getCampTags();
+            }
 
 		}
 	}
