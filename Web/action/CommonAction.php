@@ -26,8 +26,10 @@
 				$_SESSION["visibility"] = CommonAction::$VISIBILITY_PUBLIC;
 			}
 
-			if ($_SESSION["visibility"] < $this->pageVisibility) {
-				header("location:login");
+			if ($_SESSION["visibility"] != $this->pageVisibility) {
+				unset($_SESSION["userEmail"]);
+				$_SESSION["visibility"] = CommonAction::$VISIBILITY_PUBLIC;
+				header("location:index");
 				exit;
 			}
 

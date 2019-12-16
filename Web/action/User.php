@@ -1,6 +1,10 @@
 <?php 
 
 class User {
+    const ANIMATOR = 1;
+    const CAMP = 2;
+    const ADMIN = 4;
+
     public $userTypes;
     public $creationDate;
     public $email;

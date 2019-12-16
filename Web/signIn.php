@@ -12,25 +12,26 @@ require_once("partial/headerWithMenu.php");
 <body class="bg-light">
 
 	<div class="container signInPage">
-		<div class="py-5 text-center">
-			<h2>Inscription</h2>
-			<p class="lead">Ce formulaire sert à s'inscrire sur camp job finder. Peu importe le type de camp, vous trouverez votre compte!</p>
-		</div>
+		<form class="needs-validation" novalidate="" action="signIn.php" method="POST">
+			<div class="py-5 text-center">
+				<h2>Inscription</h2>
+				<p class="lead">Ce formulaire sert à s'inscrire sur camp job finder. Peu importe le type de camp, vous trouverez votre compte!</p>
+			</div>
 
-		<div class="dropDownChoice">
-			<div>Êtes-vous un animateur(trice) ou un camp?</div>
-			<select name="registerkind" class="type">
-				<option value="animator">Animateur/trice</option>
-				<option value="camp">Camp ou base de plein air</option>
-			</select>
-		</div>
+			<div class="dropDownChoice">
+				<div>Êtes-vous un animateur(trice) ou un camp?</div>
+				<select name="registerkind" class="type">
+					<option value="animator">Animateur/trice</option>
+					<option value="camp">Camp ou base de plein air</option>
+				</select>
+			</div>
 
 
-		<div class="row animatorInscription">
+			<div class="row animatorInscription">
 
-			<div class="col-md-8 order-md-1 animatorFields">
-				<h4 class="mb-3">Informations -Animateur/trice</h4>
-				<form class="needs-validation" novalidate="" action="signIn.php" method="POST">
+				<div class="col-md-8 order-md-1 animatorFields">
+					<h4 class="mb-3">Informations -Animateur/trice</h4>
+
 					<div class="row">
 						<div class="col-md-6 mb-3">
 							<label for="firstName">Prénom</label>
@@ -114,9 +115,9 @@ require_once("partial/headerWithMenu.php");
 							</div>
 						</div>
 						<button class="btn btn-primary btn-lg btn-block" type="submit">S'inscire</button>
-				</form>
-			</div>
-		</div>
+		</form>
+	</div>
+	</div>
 
 
 	</div>
@@ -124,7 +125,7 @@ require_once("partial/headerWithMenu.php");
 	<footer class="my-5 pt-5 text-muted text-center text-small">
 		<p class="mb-1">© 2019 Félix Dumas-Lavoie</p>
 	</footer>
-	
+
 	<script src="js/signIn.js"></script>
 </body>
 

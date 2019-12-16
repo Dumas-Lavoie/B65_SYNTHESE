@@ -10,7 +10,7 @@
 		}
 
 		protected function executeAction() {
-					unset($_SESSION["username"]);
+					unset($_SESSION["userEmail"]);
 					$_SESSION["visibility"] = CommonAction::$VISIBILITY_PUBLIC;
 
 					header("location:index");

@@ -10,14 +10,14 @@
 
 			$statement = $connection->prepare("SELECT * from User where email = ?");
 			$statement->bindParam(1, $username);
-			$statement->setFetchMode(PDO::FETCH_ASSOC); // row["USERNAME"]
+			$statement->setFetchMode(PDO::FETCH_ASSOC);
 			$statement->execute();
 
 			if ($row = $statement->fetch()) {
 				if (password_verify($password, $row["passwordHash"])) {
 					$user = [];
-					$user["userId"] = $row["id"];
-					$user["VISIBILITY"] = $row["typeUsager"];
+					$user["userEmail"] = $row["email"];
+					$user["visibility"] = $row["visibility"];
 				}
 			}
 			return $user;
@@ -34,9 +34,19 @@
 
 
 		public static function createAccount(User $user) {
-
 			$connection = Connection::getConnection();
+			$statement = $connection->prepare("INSERT INTO User (visibility, CreationDate, email, passwordHash)
+			VALUES( ?, ?, ?, ?)");
+			$statement->bindParam(1, $user->userTypes);
+			$statement->bindParam(2, $user->creationDate);
+			$statement->bindParam(3, $user->email);
+			$statement->bindParam(4, $user->passwordHash);
+			$statement->execute();
+		}
 
+
+		public static function getUser() {
+			$connection = Connection::getConnection();
 			$statement = $connection->prepare("INSERT INTO User (visibility, CreationDate, email, passwordHash)
 			VALUES( ?, ?, ?, ?)");
 			$statement->bindParam(1, $user->userTypes);

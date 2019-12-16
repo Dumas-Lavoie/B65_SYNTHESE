@@ -17,8 +17,8 @@
 				$user = UserDAO::authenticate($_POST["email"], $_POST["password"]);
 
 				if (!empty($user)) {
-					$_SESSION["username"] = $user["USERNAME"];
-					$_SESSION["visibility"] = 1;
+					$_SESSION["userEmail"] = $user["userEmail"];
+					$_SESSION["visibility"] = $user["visibility"];
 
 					header("location:search");
 					exit;

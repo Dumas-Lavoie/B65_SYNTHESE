@@ -6,7 +6,8 @@ CREATE  TABLE IF NOT EXISTS User (
   visibility TINYINT(1) NOT NULL,
   creationDate DATE NOT NULL ,
   email VARCHAR(255) ,
-  passwordHash CHAR(255)
+  passwordHash CHAR(255),
+  UNIQUE(email)
   )
 ENGINE = InnoDB;
 

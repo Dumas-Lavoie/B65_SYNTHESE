@@ -13,31 +13,24 @@
 
 		protected function executeAction() {
 
-			// if (isset($_POST["email"]))
-			// {
-			// 	echo "OK";
-			// 	exit();
-			// }
-
-
 			if (isset($_POST["email"]) and isset($_POST["password1"]) and isset($_POST["password2"]) and $_POST["password1"] == $_POST["password2"]) {
 				
 				$hash = password_hash($_POST["password1"], PASSWORD_DEFAULT);
 
-				$user = new User(1,date("Y-m-d H:i:s"),$_POST["email"], $hash);
-
+				if ($_POST["registerkind"] == "animator")
+				{
+					$user = new User(User::ANIMATOR, date("Y-m-d H:i:s"),$_POST["email"], $hash);
+				}
+				else if ($_POST["registerkind"] == "camp")
+				{
+					$user = new User(User::CAMP, date("Y-m-d H:i:s"),$_POST["email"], $hash);
+				}
+				
 				UserDAO::createAccount($user);
-
-				// if (!empty($user)) {
-				// 	$_SESSION["username"] = $user["USERNAME"];
-				// 	$_SESSION["visibility"] = $user["VISIBILITY"];
 
 				header("location:signInLandingPage");
 				exit;
-				// }
-				// else {
-				// 	$this->wrongLogin = true;
-				// }
+
 			}
 			else {
 				$_SESSION["test"] = "ALO";
