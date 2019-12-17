@@ -29,7 +29,7 @@ const getClientele = () => {
 
         for (let index = 0; index < response.length; index++) {
             const nom = response[index].clientele;
-            $(".selectClientele").append("<option>" + nom + "</option>");
+            $(".selectClientele").append("<option value=\""+ nom +"\">" + nom + "</option>");
         }
     });
 };
