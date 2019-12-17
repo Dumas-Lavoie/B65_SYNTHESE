@@ -67,11 +67,17 @@ require_once("partial/animPanel.php");
 
                 <div class="card">
                     <div class="card-body">
-                        <h5 class="card-title offreDuCamp"><a href="offer?offerNumber=<?php echo $key->id; ?>">Offre d'emploi</a></h5>
+                        <h5 class="card-title offreDuCamp"><a href="offer?offerNumber=1">Offre d'emploi</a></h5>
                         <h6 class="card-subtitle mb-2 text-muted leCamp"><?php echo $key->camp->nom; ?></h6>
                         <h6 class="card-subtitle mb-2 text-muted laDate"><?php echo $key->creationDate; ?></h6>
                         <p class="card-text descOffre"><?php echo $key->description; ?></p>
-                        <a href="#" onclick="postuler()" class="card-link">Postuler!</a>
+                        <!-- <a href="#" onclick="postuler()" class="card-link">Postuler!</a> -->
+                        <form action="search" method="POST">
+                            <input style="display: none;" type="text" name="nomCampPostulation" value="<?php echo $key->camp->nom; ?>">
+                            <input style="display: none;" type="text" name="message" value="Votre candidature remise au camp d'ici quelques minutes! Consultez votre courriel pour des détails. Bonne chance! <?php echo $key->camp->nom; ?>">
+                            <input style="display: none;" type="text" name="idJobOfferPostulation" value="<?php echo $key->id; ?>">
+                            <button type="submit">Postuler!</button>
+                        </form>
                     </div>
                     <div class="photoCard"></div>
                 </div>
@@ -105,7 +111,7 @@ require_once("partial/animPanel.php");
 
 
 <script>
-        $("body").css("height", "100vh");
+    $("body").css("height", "100vh");
 </script>
 
 <?php

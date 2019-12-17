@@ -59,9 +59,9 @@
 
 
 			if ($row = $statement->fetch()) {
-				$user = new User($row['visibility'], $row['creationDate'],$row['email'], null);
+				$user = new User($row['id'], $row['visibility'], $row['creationDate'],$row['email'], null);
 			}
-			
+
 			return $user;
 		}
 	}

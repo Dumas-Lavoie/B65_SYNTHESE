@@ -63,6 +63,7 @@ class CampSearchDAO
 
                 $client = new Clientele($clienteleArray[0]['id'], $clienteleArray[0]['clientele']);
 
+                $idJobOffer = $value['id'];
 
                 $idCamp = $value['fk_id_Camp'];
                 $camp = null;
@@ -81,7 +82,7 @@ class CampSearchDAO
 
 
 
-                $jobObject = new JobOffer($camp, $client, $creationDate, $descripiton);
+                $jobObject = new JobOffer($idJobOffer, $camp, $client, $creationDate, $descripiton);
 
                 array_push($results, $jobObject);
             }

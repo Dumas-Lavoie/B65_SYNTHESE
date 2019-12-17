@@ -19,11 +19,11 @@
 
 				if ($_POST["registerkind"] == "animator")
 				{
-					$user = new User(User::ANIMATOR, date("Y-m-d H:i:s"),$_POST["email"], $hash);
+					$user = new User(null, User::ANIMATOR, date("Y-m-d H:i:s"),$_POST["email"], $hash);
 				}
 				else if ($_POST["registerkind"] == "camp")
 				{
-					$user = new User(User::CAMP, date("Y-m-d H:i:s"),$_POST["email"], $hash);
+					$user = new User(null, User::CAMP, date("Y-m-d H:i:s"),$_POST["email"], $hash);
 				}
 				
 				UserDAO::createAccount($user);
@@ -33,7 +33,7 @@
 
 			}
 			else {
-				$_SESSION["test"] = "ALO";
+				
 			}
 		}
 	}

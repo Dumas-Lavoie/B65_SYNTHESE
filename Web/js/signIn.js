@@ -18,7 +18,6 @@ const showSearchResults = (selection) => {
 	$('.animatorInscription').css("display", "block");
 	$("body").css("height", "auto");
 
-
 };
 
 

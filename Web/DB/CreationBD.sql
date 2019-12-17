@@ -85,12 +85,12 @@ ENGINE = InnoDB;
 
 CREATE  TABLE IF NOT EXISTS CurrentApplys (
   id INT  AUTO_INCREMENT  PRIMARY KEY,
-  fk_id_Animateur INT,
-  fk_id_camp INT,
+  fk_id_User INT,
+  fk_id_JobOffer INT, 
   apply_date DATE NOT NULL ,
   
-  FOREIGN KEY (fk_id_Camp) REFERENCES Camp(id),
-  FOREIGN KEY (fk_id_Animateur) REFERENCES Animateur(id)
+  FOREIGN KEY (fk_id_JobOffer) REFERENCES JobOffer(id),
+  FOREIGN KEY (fk_id_User) REFERENCES User(id)
   )
 ENGINE = InnoDB;
 
