@@ -8,9 +8,28 @@ $action->execute();
 require_once("partial/animPanel.php");
 ?>
 
-<div class="alert alert-success aPostule">
-    <strong>Succès!</strong> Vous avez postulé au camp "TEST"
-</div>
+
+<?php 
+if ($action->applyConfirmed)
+{
+?>
+    <div class="alert alert-success aPostule">
+    <strong>Succès!</strong> Vous avez postulé au <?php echo $action->selectedCampName; ?>
+    </div>
+<?php
+}
+?>
+
+<?php 
+if ($action->alreadyApplied)
+{
+?>
+    <div class="alert alert-warning aPostule">
+    <strong>Erreur!</strong> Vous avez déjà postulé pour cet emploi au <?php echo $action->selectedCampName; ?>
+    </div>
+<?php
+}
+?>
 
 
 <div class="container">
@@ -71,7 +90,7 @@ require_once("partial/animPanel.php");
                         <h6 class="card-subtitle mb-2 text-muted leCamp"><?php echo $key->camp->nom; ?></h6>
                         <h6 class="card-subtitle mb-2 text-muted laDate"><?php echo $key->creationDate; ?></h6>
                         <p class="card-text descOffre"><?php echo $key->description; ?></p>
-                        <!-- <a href="#" onclick="postuler()" class="card-link">Postuler!</a> -->
+
                         <form action="search" method="POST">
                             <input style="display: none;" type="text" name="nomCampPostulation" value="<?php echo $key->camp->nom; ?>">
                             <input style="display: none;" type="text" name="message" value="Votre candidature remise au camp d'ici quelques minutes! Consultez votre courriel pour des détails. Bonne chance! <?php echo $key->camp->nom; ?>">

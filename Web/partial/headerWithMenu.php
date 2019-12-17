@@ -7,8 +7,10 @@ require_once("partial/header.php");
 <h5 class="my-0 mr-md-auto font-weight-normal">Camp job finder</h5>
 	
 	<nav class="my-2 my-md-0 mr-md-3">
-		<a class="p-2 text-dark" href="index">Accueil</a>
-		<a class="p-2 text-dark" href="features">Fonctionalités</a>
+		<a class="p-2 text-dark lobbyLink" href="index">Accueil</a>
+		<!-- <a class="p-2 text-dark" href="search">Fonctionalités</a> -->
+		<a class="p-2 text-dark animTools" href="search">Rechercher un camp</a>
+		<a class="p-2 text-dark animTools" href="animApply">Consulter ma liste de postulation</a>
 	</nav>
 
 

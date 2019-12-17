@@ -172,6 +172,10 @@ button:hover {
   color: white;
 }
 
+.animTools {
+	display: none;
+}
+
 /* Sign-in page */
 /* --------------------------- */
 #signIn {
@@ -422,7 +426,6 @@ button:first-of-type {
 }
 
 // Search page "cards
-
 .card {
 	width: 100%; 
 	margin-top: 10px;
@@ -444,5 +447,4 @@ button:first-of-type {
 	top: 0; 
 	left: 50%; 
 	transform:translateX(-50%); 
-	display: none;
 }

@@ -3,12 +3,21 @@
 
 	class IndexAction extends CommonAction {
 
+		public $isLoggedIn = false;
+		public $visiblity = null;
+		
 		public function __construct() {
 			parent::__construct(CommonAction::$VISIBILITY_PUBLIC);
 		}
 
 		protected function executeAction() {
-			// phpc = créer les classes contrôleurs
-			// phpx = base de la vue
+			
+		
+			if (isset($_SESSION['userEmail']))
+			{
+				$this->isLoggedIn = true;
+				$this->visiblity = $_SESSION['visibility'];
+			}
+
 		}
 	}

@@ -13,8 +13,11 @@
 					unset($_SESSION["userEmail"]);
 					$_SESSION["visibility"] = CommonAction::$VISIBILITY_PUBLIC;
 
-					header("location:index");
+					header("location:login?logout=true");
 					exit;
-			}
+            }
+            
+
+
 		}
 	

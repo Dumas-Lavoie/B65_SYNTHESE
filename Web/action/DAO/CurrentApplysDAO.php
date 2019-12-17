@@ -7,7 +7,7 @@ class CurrentApplysDAO
     public static function addApply($idJobOffer, $idUser)
     {
 
-        $userAdded = true; 
+        $added = true; 
         $alreadyApplied = false;
 
         $connection = Connection::getConnection();
@@ -29,19 +29,20 @@ class CurrentApplysDAO
 
         if ($alreadyApplied != true)
         {
+            $date = date("Y-m-d H:i:s");
             $statement = $connection->prepare("INSERT INTO CurrentApplys (fk_id_User, fk_id_JobOffer, apply_date)
-            VALUES( ?, ?, ?, ?)");
+            VALUES(?, ?, ?)");
             $statement->bindParam(1,  $idUser);
             $statement->bindParam(2, $idJobOffer);
-            $statement->bindParam(3, date("Y-m-d H:i:s"));
+            $statement->bindParam(3, $date);
             $statement->execute();
         }
         else{
-            $userAdded = false;
+            $added = false;
         }
 
         // Renvoie la ou les clienteles
-        return $userAdded;
+        return $added;
     }
 
     public static function getAnimatorApplys($idAnimator)

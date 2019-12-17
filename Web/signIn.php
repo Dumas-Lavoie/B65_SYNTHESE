@@ -8,6 +8,17 @@ require_once("partial/headerWithMenu.php");
 ?>
 
 
+<?php 
+if ($action->isLoggedIn)
+{
+?>
+    <div class="alert alert-info aPostule">
+	Vous êtes connecté. <a href="logout">Se déconnecter</a>
+    </div>
+<?php
+}
+?>
+
 
 <body class="bg-light">
 

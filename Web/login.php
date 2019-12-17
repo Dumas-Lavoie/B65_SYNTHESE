@@ -11,17 +11,29 @@ require_once("partial/headerWithMenu.php");
 
 	<body class="text-center">
 
-	<?php
-        if ($action->wrongLogin) {
-            ?>
-            <div class="alert alert-danger">
-                <strong>Erreur de connexion</strong>
-            </div>
-        <?php
+
+		<?php
+		if ($action->logout) {
+			?>
+			<div class="alert alert-success aPostule">
+			<strong>Succès!</strong> Déconnexion réussie
+			</div>
+		<?php
 		}
 		?>
 
-		<form class="form-signin" action="login.php" method="POST" >
+
+		<?php
+		if ($action->wrongLogin) {
+			?>
+			<div class="alert alert-danger">
+				<strong>Erreur de connexion</strong>
+			</div>
+		<?php
+		}
+		?>
+
+		<form class="form-signin" action="login.php" method="POST">
 			<img src="images/campFireColor.png" width="100px" height="100px">
 			<h1 class="h3 mb-3 font-weight-normal">Connexion</h1>
 			<label for="inputEmail" class="sr-only">Courriel</label>
@@ -38,5 +50,7 @@ require_once("partial/headerWithMenu.php");
 		</form>
 	</body>
 
-	<script>$("body").css("height", "100vh");</script>
+	<script>
+		$("body").css("height", "100vh");
+	</script>
 </div>

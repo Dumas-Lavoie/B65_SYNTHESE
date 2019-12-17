@@ -6,12 +6,20 @@
 
 	class SignInAction extends CommonAction {
 		public $wrongLogin = false;
+			public $isLoggedIn = false;
+
+
 
 		public function __construct() {
 			parent::__construct(CommonAction::$VISIBILITY_PUBLIC);
 		}
 
 		protected function executeAction() {
+			
+			if (isset($_SESSION['userEmail']))
+			{
+				$this->isLoggedIn = true;
+			}
 
 			if (isset($_POST["email"]) and isset($_POST["password1"]) and isset($_POST["password2"]) and $_POST["password1"] == $_POST["password2"]) {
 				
