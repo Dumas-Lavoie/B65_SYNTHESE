@@ -27,3 +27,9 @@ INSERT INTO linkinTable (fk_id_Camp, fk_id_CampTags) VALUES ((SELECT id FROM Cam
 -- Creating a job offer
 INSERT INTO JobOffer (fk_id_Camp, fk_id_Clientele, creationDate, description) VALUES ((SELECT id FROM Camp WHERE nom = "Camp Larochelle"),
 (SELECT id FROM Clientele WHERE clientele = "Jeunes adultes"), (SELECT Now()), "Super offre d'emploi à 18$/h chauffé éclairé");
+
+INSERT INTO JobOffer (fk_id_Camp, fk_id_Clientele, creationDate, description) VALUES ((SELECT id FROM Camp WHERE nom = "Camp Larochelle"),
+(SELECT id FROM Clientele WHERE clientele = "Jeunes adultes"), (SELECT Now()), "Venez tester vos skills en animation PHP.");
+
+INSERT INTO JobOffer (fk_id_Camp, fk_id_Clientele, creationDate, description) VALUES ((SELECT id FROM Camp WHERE nom = "Camp Larochelle"),
+(SELECT id FROM Clientele WHERE clientele = "Enfants 6 à 8 ans"), (SELECT Now()), "Offre de merde 10$/h au camp larochelle.");

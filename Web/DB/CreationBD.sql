@@ -57,9 +57,12 @@ CREATE  TABLE IF NOT EXISTS JobOffer (
   id INT  AUTO_INCREMENT PRIMARY KEY ,
   fk_id_Camp INT,
   fk_id_Clientele INT,
+  fk_id_MainPicture INT,
   creationDate DATE NOT NULL,
+  title VARCHAR(255) NOT NULL,
   description VARCHAR(512) NOT NULL,
   FOREIGN KEY (fk_id_Camp) REFERENCES Camp(id),
+  FOREIGN KEY (fk_id_MainPicture) REFERENCES CampPictures(id),
   FOREIGN KEY (fk_id_Clientele) REFERENCES Clientele(id)
   )
 ENGINE = InnoDB;

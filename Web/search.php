@@ -104,11 +104,22 @@ require_once("partial/animPanel.php");
 </div>
 
 
-
-
 <script>
-    $("body").css("height", "100vh");
+        $("body").css("height", "100vh");
 </script>
+
+<?php
+if ($action->ajustHeight) {
+    ?>
+    <script>
+        $("body").css("height", "auto");
+    </script>
+<?php
+}
+?>
+
+
+
 <script src="js/search.js"></script>
 <script src="js/searchOptions.js"></script>
 <?php

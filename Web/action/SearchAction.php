@@ -5,6 +5,7 @@
 	class SearchAction extends CommonAction {
         public $searchEnabled = false;
         public $searchResults = null;
+        public $ajustHeight = false;
 
 		public function __construct() {
 			parent::__construct(CommonAction::$VISIBILITY_MEMBER);
@@ -19,6 +20,12 @@
 
                 // Ici j'ai toutes les offres d'emplois correspondant au critère de recherche.
                 $this->searchResults = CampSearchDAO::getJobOffersObject($_GET['selectCampType'], $_GET['selectClientele']);
+
+                if (count($this->searchResults) > 1)
+                {
+                    $this->ajustHeight = true;
+                }
+
             }
 
 		}
