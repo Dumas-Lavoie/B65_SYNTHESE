@@ -1,7 +1,6 @@
 <?php
     require_once("action/CommonAction.php");
-    require_once("action/DAO/CampTagsDAO.php");
-    require_once("action/DAO/ClienteleDAO.php");
+    require_once("action/DAO/CampSearchDAO.php");
 
 	class SearchAction extends CommonAction {
         public $wrongLogin = false;
@@ -17,12 +16,16 @@
             if ( isset($_GET['selectCampType']) and isset($_GET['selectClientele'])) 
             {
                 $this->searchEnabled = true;
+
+                $_SESSION['searchResults'] = "TEST";
+                CampSearchDAO::getJobOffers($_GET['selectCampType'], $_GET['selectClientele']);
+
             }
-            // if(!isset($_POST['lst_clientele']) or !isset($_POST['lst_tagsCamp']))
-            // {
-            //     $_POST['lst_clientele'] = ClienteleDAO::getClientele();
-            //     $_POST['lst_tagsCamp'] = CampTagsDAO::getCampTags();
-            // }
+
+
+             
+
+           
 
 		}
 	}

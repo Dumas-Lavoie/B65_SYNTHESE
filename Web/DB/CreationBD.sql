@@ -71,7 +71,7 @@ CREATE  TABLE IF NOT EXISTS CampTags (
   )
 ENGINE = InnoDB;
 
-CREATE  TABLE IF NOT EXISTS linkinTable (
+CREATE  TABLE IF NOT EXISTS LinkinTable (
   id INT  AUTO_INCREMENT  PRIMARY KEY,
   fk_id_Camp INT,
   fk_id_CampTags INT,
