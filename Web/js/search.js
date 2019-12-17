@@ -33,3 +33,9 @@ const getClientele = () => {
         }
     });
 };
+
+
+const showSearchResults = () => {
+		$('#searchMenu').css("display", "none");
+		$('#searchResults').css("display", "block");
+};
