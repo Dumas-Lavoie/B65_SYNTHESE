@@ -15,7 +15,7 @@ const getCampTags = () => {
 
         for (let index = 0; index < response.length; index++) {
             const nom = response[index].typeCamp;
-            $(".selectCampType").append("<option value=\""+ nom +"\">" + nom + "</option>");
+            $(".selectCampType").append("<option name=\""+ nom +"\" value=\""+ nom +"\">" + nom + "</option>");
         }
     });
 };

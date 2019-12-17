@@ -2,7 +2,7 @@
 	require_once("action/CommonAction.php");
 	require_once("action/DAO/UserDAO.php");
 
-	
+
 
 	class LoginAction extends CommonAction {
 		public $wrongLogin = false;
@@ -23,6 +23,12 @@
 					header("location:search");
 					exit;
 				}
+
+				if(!isset($_COOKIE["remember-me"]) && isset($_POST["remember-me"])) {
+					setcookie("remember-me", $_POST["username"]);
+				}
+
+
 				else {
 					$this->wrongLogin = true;
 				}

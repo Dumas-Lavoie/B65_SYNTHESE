@@ -345,7 +345,7 @@ button:hover {
 	  width: 200px;
 	  height: 43px;
   }
-  
+
  .group {
 	  margin-bottom: 0 !important;
 	  background-color: rgba(222,222,222,0.9);
@@ -362,7 +362,7 @@ button:hover {
 /* Search page */
 // Animator Search page
 #connectedOptions {
-	display: flex; 
+	display: flex;
 	flex-direction:column;
 	text-align: center;
 
@@ -373,12 +373,12 @@ button:hover {
 	a {
 		color: black;
 	}
-	
+
 }
 
 .dropDown {
 	padding-top: 20px;
-	display: flex; 
+	display: flex;
 	flex-direction:row;
 
 	& p:first-of-type{
@@ -386,7 +386,7 @@ button:hover {
 	}
 
 	& select {
-		width: 150px;
+		width: 50%;
 		height: 20px;
 		margin-top: 10px;
 	}
