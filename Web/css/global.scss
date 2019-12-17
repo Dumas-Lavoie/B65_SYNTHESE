@@ -420,3 +420,29 @@ button:first-of-type {
 #searchResults a {
 	color: black;
 }
+
+// Search page "cards
+
+.card {
+	width: 100%; 
+	margin-top: 10px;
+	border: solid;
+	border-color: black;
+
+	.photoCard {
+		width: 100%; 
+		height: 200px; 
+		background-image: url(../images/db/1.jpg);
+	}
+
+	.card-link {
+		color: green !important;
+	}
+}
+.aPostule {
+	position: absolute; 
+	top: 0; 
+	left: 50%; 
+	transform:translateX(-50%); 
+	display: none;
+}

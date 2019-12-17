@@ -3,8 +3,8 @@
     require_once("action/DAO/CampSearchDAO.php");
 
 	class SearchAction extends CommonAction {
-        public $wrongLogin = false;
         public $searchEnabled = false;
+        public $searchResults = null;
 
 		public function __construct() {
 			parent::__construct(CommonAction::$VISIBILITY_MEMBER);
@@ -17,15 +17,9 @@
             {
                 $this->searchEnabled = true;
 
-                $_SESSION['searchResults'] = "TEST";
-                CampSearchDAO::getJobOffers($_GET['selectCampType'], $_GET['selectClientele']);
-
+                // Ici j'ai toutes les offres d'emplois correspondant au critère de recherche.
+                $this->searchResults = CampSearchDAO::getJobOffersObject($_GET['selectCampType'], $_GET['selectClientele']);
             }
-
-
-             
-
-           
 
 		}
 	}

@@ -426,4 +426,30 @@ button:first-of-type {
 #searchResults a {
   color: black;
 }
+
+.card {
+  width: 100%;
+  margin-top: 10px;
+  border: solid;
+  border-color: black;
+}
+
+.card .photoCard {
+  width: 100%;
+  height: 200px;
+  background-image: url(../images/db/1.jpg);
+}
+
+.card .card-link {
+  color: green !important;
+}
+
+.aPostule {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  display: none;
+}
 /*# sourceMappingURL=global.css.map */
