@@ -60,18 +60,18 @@ require_once("partial/animPanel.php");
 
         <?php
         if (isset($action->searchResults)) {
+
             foreach ($action->searchResults as $key) {
-                // var_dump($key);
 
                 ?>
 
                 <div class="card">
                     <div class="card-body">
-                        <h5 class="card-title offreDuCamp">Offre d'emploi</h5>
+                        <h5 class="card-title offreDuCamp"><a href="offer?offerNumber=<?php echo $key->id; ?>">Offre d'emploi</a></h5>
                         <h6 class="card-subtitle mb-2 text-muted leCamp"><?php echo $key->camp->nom; ?></h6>
                         <h6 class="card-subtitle mb-2 text-muted laDate"><?php echo $key->creationDate; ?></h6>
                         <p class="card-text descOffre"><?php echo $key->description; ?></p>
-                        <a href="#" onclick="" class="card-link">Postuler!</a>
+                        <a href="#" onclick="postuler()" class="card-link">Postuler!</a>
                     </div>
                     <div class="photoCard"></div>
                 </div>

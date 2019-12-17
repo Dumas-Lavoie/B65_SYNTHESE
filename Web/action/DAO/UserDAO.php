@@ -45,14 +45,23 @@
 		}
 
 
-		public static function getUser() {
+		public static function getUser($email) {
+
+			$user = null;
+			
 			$connection = Connection::getConnection();
-			$statement = $connection->prepare("INSERT INTO User (visibility, CreationDate, email, passwordHash)
-			VALUES( ?, ?, ?, ?)");
-			$statement->bindParam(1, $user->userTypes);
-			$statement->bindParam(2, $user->creationDate);
-			$statement->bindParam(3, $user->email);
-			$statement->bindParam(4, $user->passwordHash);
+			$statement = $connection->prepare("SELECT * from User where email = ?");
+			$statement->bindParam(1, $username);
+			$statement->setFetchMode(PDO::FETCH_ASSOC);
 			$statement->execute();
+			$statement->bindParam(1, $email);
+			$statement->execute();
+
+
+			if ($row = $statement->fetch()) {
+				$user = new User($row['visibility'], $row['creationDate'],$row['email'], null);
+			}
+			
+			return $user;
 		}
 	}
