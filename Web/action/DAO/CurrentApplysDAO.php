@@ -1,5 +1,6 @@
 <?php
 require_once("action/DAO/Connection.php");
+require_once("action/DAO/CampSearchDAO.php");
 
 class CurrentApplysDAO
 {
@@ -45,18 +46,19 @@ class CurrentApplysDAO
         return $added;
     }
 
-    public static function getAnimatorApplys($idAnimator)
+    public static function getAnimatorApplys($email)
     {
 
         $connection = Connection::getConnection();
 
-        $statement = $connection->prepare("SELECT * from CurrentApplys WHERE fk_id_Animateur = ?");
-        $statement->bindParam(1, $idAnimator);
+        $statement = $connection->prepare("SELECT * from CurrentApplys WHERE fk_id_User = (SELECT id FROM User WHERE email = ?)");
+        $statement->bindParam(1, $email);
         $statement->setFetchMode(PDO::FETCH_ASSOC);
         $statement->execute();
 
 
         while ($row = $statement->fetch()) {
+            $row['campName'] = CampSearchDAO::getCampName($row['fk_id_User']);
             $applys[] = $row;
         }
 

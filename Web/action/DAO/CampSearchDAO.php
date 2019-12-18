@@ -89,4 +89,27 @@ class CampSearchDAO
         }
         return $results;
     }
+
+
+
+    public static function getCampName($idCamp)
+    {
+        $camp = null;
+
+        $connection = Connection::getConnection();
+        $statement = $connection->prepare("SELECT nom FROM Camp WHERE id = ?");
+        $statement->bindParam(1, $idCamp);
+        $statement->setFetchMode(PDO::FETCH_ASSOC);
+        $statement->execute();
+
+        
+        if ($row = $statement->fetch()) {
+            $camp = $row;
+        }
+
+        return $camp;
+    }
+
+
+
 }

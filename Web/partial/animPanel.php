@@ -10,8 +10,8 @@ require_once("partial/header.php");
 <h5 class="my-0 mr-md-auto font-weight-normal"></h5>
 	
 	<nav class="my-2 my-md-0 mr-md-3">
-        <a class="p-2 text-dark" href="animApply">Consulter ma liste de postulation</a>
-        <a class="p-2 text-dark" href="index">Accueil</a>
+		<a class="p-2 text-dark" href="animApply">Consulter ma liste de postulation</a>
+		<a class="p-2 text-dark" href="search">Rechercher...</a>
 	</nav>
 
 
