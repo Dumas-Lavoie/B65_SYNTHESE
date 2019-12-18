@@ -1,6 +1,7 @@
 <?php
 require_once("action/DAO/Connection.php");
 require_once("action/DAO/CampSearchDAO.php");
+require_once("action/DAO/UserDAO.php");
 
 class CurrentApplysDAO
 {
@@ -60,6 +61,30 @@ class CurrentApplysDAO
         while ($row = $statement->fetch()) {
             $campId = CampSearchDAO::getCampIdFromIdJobOffer($row['fk_id_JobOffer']);
             $row['campName'] = CampSearchDAO::getCampName($campId);
+            $applys[] = $row;
+
+        }
+
+        // Renvoie la liste des applications d'un animateur
+        return $applys;
+    }
+
+
+
+    public static function getAllApplys()
+    {
+
+        $connection = Connection::getConnection();
+
+        $statement = $connection->prepare("SELECT * from CurrentApplys");
+        $statement->setFetchMode(PDO::FETCH_ASSOC);
+        $statement->execute();
+
+
+        while ($row = $statement->fetch()) {
+            $campId = CampSearchDAO::getCampIdFromIdJobOffer($row['fk_id_JobOffer']);
+            $row['campName'] = CampSearchDAO::getCampName($campId);
+            $row['userEmail'] = UserDAO::getUserById($row['fk_id_User']);
             $applys[] = $row;
 
         }

@@ -15,7 +15,12 @@ class AdminAction extends CommonAction
 	protected function executeAction()
 	{
         
-        // $this->apply = CurrentApplysDAO::getAnimatorApplys($_SESSION['userEmail']);
+        $this->apply = CurrentApplysDAO::getAllApplys();
+
+        if (count($this->apply) >= 7)
+        {
+            $this->ajustHeight = true;
+        }
 
 	}
 }

@@ -64,4 +64,26 @@
 
 			return $user;
 		}
+
+
+
+		public static function getUserById($id) {
+
+			$user = null;
+			
+			$connection = Connection::getConnection();
+			$statement = $connection->prepare("SELECT * from User where id = ?");
+			$statement->bindParam(1, $username);
+			$statement->setFetchMode(PDO::FETCH_ASSOC);
+			$statement->execute();
+			$statement->bindParam(1, $id);
+			$statement->execute();
+
+
+			if ($row = $statement->fetch()) {
+				$user = new User($row['id'], $row['visibility'], $row['creationDate'],$row['email'], null);
+			}
+
+			return $user;
+		}
 	}
