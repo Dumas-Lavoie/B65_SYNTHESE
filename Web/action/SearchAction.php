@@ -15,6 +15,7 @@ class SearchAction extends CommonAction
     public $applyConfirmed = false;
     public $alreadyApplied = false;
     public $selectedCampName = null;
+    public $picture = null;
 
     public $bio = null;
 
@@ -34,10 +35,16 @@ class SearchAction extends CommonAction
             exit;
         }
 
+
+        // Voici une fonctionalité que j'implémente tout en sachant 
+        // qu'elle serait vulnérable au cross site scripting 
+        // dans un contexte de production. C'est 
+        // seulement une preuve de ma capacité à la mettre en oeuvre,
+        // avoir plus de temps j'utiliserait un rich text editor en markdown à la place.
+        // Setup de la mini bio, qui reste sensible au CROSS-SITE XSSS scripting... 
         if (isset($_POST['miniBio'])) {
             AnimatorDAO::updateBio($_POST['miniBio'], $_SESSION['userEmail']);
         }
-
 
         $this->bio = AnimatorDAO::getBio($_SESSION['userEmail']);
 
@@ -52,23 +59,21 @@ class SearchAction extends CommonAction
                 $this->ajustHeight = true;
             }
 
-            // On conserve le email du user au cas où il postulerait
-            $this->userEmail = $_SESSION['userEmail'];
         }
 
-        if (isset($_FILES["fileProfilePicture"])) {
-            $uploadFile = $this->fileUpload($_FILES["fileProfilePicture"]);
-
-            UserDAO::updatePicturePath($uploadFile, $_SESSION['userEmail']);
+        
+        if (isset($_FILES["fileProfilePicture"]))
+        {
+            if ($_FILES["fileProfilePicture"]["tmp_name"] != "") {
+                $uploadFile = $this->fileUpload($_FILES["fileProfilePicture"]);
+                
+                UserDAO::updatePicturePath($uploadFile, $_SESSION['userEmail']);
+            }
         }
+ 
 
+        $this->picture = AnimatorDAO::getPicture($_SESSION['userEmail']);
 
-        // Voici une fonctionalité que j'implémente tout en sachant 
-        // qu'elle serait vulnérable au cross site scripting 
-        // dans un contexte de production. C'est 
-        // seulement une preuve de ma capacité à la mettre en oeuvre,
-        // avoir plus de temps j'utiliserait un rich text editor en markdown
-        // et utiliserait probablement du AJAX.
         if (isset($_FILES["fileProfilePicture"])) {
         }
 

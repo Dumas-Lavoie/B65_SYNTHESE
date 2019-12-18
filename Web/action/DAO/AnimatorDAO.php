@@ -49,6 +49,24 @@ class AnimatorDAO {
         return $bio;
     }
 
+
+    public static function getPicture($userEmail)
+    {
+        $picture = null;
+
+        $connection = Connection::getConnection();
+        $statement = $connection->prepare("SELECT profilePicture FROM Animateur WHERE fk_id_User = (SELECT id FROM User WHERE email = ?)");
+        $statement->bindParam(1, $userEmail);
+        $statement->execute();
+
+        if ($row = $statement->fetch()) {
+            $picture = $row;
+
+        }
+
+        return $picture;
+    }
+
     
 
 }

@@ -59,11 +59,16 @@ if ($action->alreadyApplied)
 
 
         <div class="col">
-            <form action="search" method="POST">
+            <form enctype="multipart/form-data" action="search" method="POST">
                 <h3>Options</h3>
                 <p>Votre photo de profil</p>
-                <img id="profilePicture" src="" height="200px" width="200px" onclick="changingProfilePicture()">
-                <input name="fileProfilePicture" type="file" id="file" />
+                <img id="profilePicture" src= "<?php 
+                                                    if($action->picture['profilePicture'] != null)
+                                                    {
+                                                        echo $action->picture['profilePicture'];
+                                                    }
+                                                    ?>" height="200px" width="200px" onclick="changingProfilePicture()">
+                <input type="file" name="fileProfilePicture" id="file"/>
                 <p>Votre mini bio:</p>
                 <textarea name="miniBio" id="miniBio" rows="4" cols="50"><?php if($action->bio['description'] != null){
                     echo $action->bio['description'];
