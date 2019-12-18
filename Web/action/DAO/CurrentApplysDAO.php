@@ -49,6 +49,7 @@ class CurrentApplysDAO
 
     public static function getAnimatorApplys($email)
     {
+        $applys = array();
 
         $connection = Connection::getConnection();
 

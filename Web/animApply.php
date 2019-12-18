@@ -14,7 +14,10 @@ require_once("partial/animPanel.php");
 
     <h3>Liste de postulation</h3>
 
-    <?php foreach ($action->apply as $row) {
+    <?php 
+        if($action->apply != null)
+        {
+        foreach ($action->apply as $row) {
 
     ?>
         <div class="row" id="searchMenu">
@@ -31,6 +34,7 @@ require_once("partial/animPanel.php");
         </div>
     <?php
     }
+}
     ?>
 
 

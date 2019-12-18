@@ -65,7 +65,9 @@ if ($action->alreadyApplied)
                 <img id="profilePicture" src="" height="200px" width="200px" onclick="changingProfilePicture()">
                 <input name="fileProfilePicture" type="file" id="file" />
                 <p>Votre mini bio:</p>
-                <textarea name="miniBio" id="miniBio" rows="4" cols="50"></textarea>
+                <textarea name="miniBio" id="miniBio" rows="4" cols="50"><?php if($action->bio['description'] != null){
+                    echo $action->bio['description'];
+                } ?></textarea>
                 <button type="submit" class="btn btn-primary">Updater mes infos!</button>
             </form>
         </div>

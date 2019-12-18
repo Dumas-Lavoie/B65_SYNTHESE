@@ -23,7 +23,32 @@ class AnimatorDAO {
         $statement->execute();
     }
 
+    public static function updateBio($bio, $userEmail)
+    {
+        $connection = Connection::getConnection();
+        $statement = $connection->prepare("UPDATE Animateur SET description = ? WHERE fk_id_User = (SELECT id FROM User WHERE email = ?)");
+        $statement->bindParam(1, $bio);
+        $statement->bindParam(2, $userEmail);
+        $statement->execute();
+    }
 
+    public static function getBio($userEmail)
+    {
+        $bio = null;
 
+        $connection = Connection::getConnection();
+        $statement = $connection->prepare("SELECT description FROM Animateur WHERE fk_id_User = (SELECT id FROM User WHERE email = ?)");
+        $statement->bindParam(1, $userEmail);
+        $statement->execute();
+
+        if ($row = $statement->fetch()) {
+            $bio = $row;
+
+        }
+
+        return $bio;
+    }
+
+    
 
 }

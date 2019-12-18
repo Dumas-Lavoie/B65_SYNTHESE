@@ -18,7 +18,6 @@ require_once("partial/header.php");
 
 	<div id="connectedOptions">
 		<p class="p-2 text-muted" id="loginState">Connecté en tant qu'animateur</p>
-		<a id="username" href="userPref">Username</a>
 
 		<a class="btn btn-outline-danger" href="logout">Se déconnecter</a>
 	</div>

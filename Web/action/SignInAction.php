@@ -52,6 +52,14 @@ class SignInAction extends CommonAction
 								
 					AnimatorDAO::createAnimator($animator);
 
+					// On envoie un courriel pour confirmer la création du compte
+					// Exemple fonction mail() tiré d'internet
+					$to = $_SESSION['userEmail'];
+					$subject = "Camp Job Finder: Bienvenue!!";
+					$txt = "Un compte sur Camp Job Finder a été créé avec votre adresse courriel. Il est maintenant activé! Félicitation!";
+
+					mail($to, $subject, $txt);
+
 					header("location:signInLandingPage");
 					exit;
 				}

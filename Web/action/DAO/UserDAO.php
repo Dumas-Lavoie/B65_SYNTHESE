@@ -23,12 +23,12 @@
 			return $user;
 		}
 
-		public static function updatePassword($username, $newPassword) {
+		public static function updatePassword($email, $newPassword) {
 			$connection = Connection::getConnection();
 
-			$statement = $connection->prepare("UPDATE User SET password = ? where username = ?");
+			$statement = $connection->prepare("UPDATE User SET password = ? where email = ?");
 			$statement->bindParam(1, $newPassword);
-			$statement->bindParam(2, $username);
+			$statement->bindParam(2, $email);
 			$statement->execute();
 		}
 
@@ -105,4 +105,24 @@
 
 			return $test;
 		}
+
+
+		public static function updatePicturePath($picturePath, $userEmail) {
+			$test = false;
+			
+			$connection = Connection::getConnection();
+			$statement = $connection->prepare("UPDATE Animateur SET profilePicture = ? WHERE fk_id_User = (SELECT id FROM User WHERE email = ?)");
+			$statement->bindParam(1, $picturePath);
+			$statement->bindParam(2, $userEmail);
+			$statement->execute();
+
+
+			if ($row = $statement->fetch()) {
+				$test = true;
+			}
+
+			return $test;
+		}
+
+		
 	}

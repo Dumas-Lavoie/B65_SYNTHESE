@@ -10,7 +10,10 @@
 		}
 
 		protected function executeAction() {
-					unset($_SESSION["userEmail"]);
+					
+					session_unset();
+            		session_destroy();
+            		session_start();
 					$_SESSION["visibility"] = CommonAction::$VISIBILITY_PUBLIC;
 
 					header("location:login?logout=true");
