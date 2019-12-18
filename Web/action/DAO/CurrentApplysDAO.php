@@ -58,8 +58,10 @@ class CurrentApplysDAO
 
 
         while ($row = $statement->fetch()) {
-            $row['campName'] = CampSearchDAO::getCampName($row['fk_id_User']);
+            $campId = CampSearchDAO::getCampIdFromIdJobOffer($row['fk_id_JobOffer']);
+            $row['campName'] = CampSearchDAO::getCampName($campId);
             $applys[] = $row;
+
         }
 
         // Renvoie la liste des applications d'un animateur

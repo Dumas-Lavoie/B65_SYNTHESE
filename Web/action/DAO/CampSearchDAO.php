@@ -111,5 +111,23 @@ class CampSearchDAO
     }
 
 
+    public static function getCampIdFromIdJobOffer($idJobOffer)
+    {
+        $campId = null;
+
+        $connection = Connection::getConnection();
+        $statement = $connection->prepare("SELECT fk_id_Camp FROM JobOffer WHERE id = ?");
+        $statement->bindParam(1, $idJobOffer);
+        $statement->setFetchMode(PDO::FETCH_ASSOC);
+        $statement->execute();
+
+        
+        if ($row = $statement->fetch()) {
+            $campId = $row['fk_id_Camp'];
+        }
+
+        return $campId;
+    }
+
 
 }

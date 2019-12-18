@@ -2,7 +2,6 @@
 require_once("action/CommonAction.php");
 require_once("action/DAO/CurrentApplysDAO.php");
 
-
 class AnimApplyAction extends CommonAction
 {
     public $apply = array();
@@ -15,8 +14,8 @@ class AnimApplyAction extends CommonAction
 
 	protected function executeAction()
 	{
+        
         $this->apply = CurrentApplysDAO::getAnimatorApplys($_SESSION['userEmail']);
 
-        
 	}
 }
