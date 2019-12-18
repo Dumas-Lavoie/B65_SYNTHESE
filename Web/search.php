@@ -93,7 +93,7 @@ if ($action->alreadyApplied)
 
                 <div class="card">
                     <div class="card-body">
-                        <h5 class="card-title offreDuCamp"><a href="offer?offerNumber=1">Offre d'emploi</a></h5>
+                        <h5 class="card-title offreDuCamp"><a href="#">Offre d'emploi</a></h5>
                         <h6 class="card-subtitle mb-2 text-muted leCamp"><?php echo $key->camp->nom; ?></h6>
                         <h6 class="card-subtitle mb-2 text-muted laDate"><?php echo $key->creationDate; ?></h6>
                         <p class="card-text descOffre"><?php echo $key->description; ?></p>
