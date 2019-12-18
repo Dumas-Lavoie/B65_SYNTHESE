@@ -5,8 +5,9 @@
 
 
 	class SignInAction extends CommonAction {
-		public $wrongLogin = false;
-			public $isLoggedIn = false;
+		
+		public $wrongSignIn = false;
+		public $isLoggedIn = false;
 
 
 
@@ -41,7 +42,10 @@
 
 			}
 			else {
-				
+				if (isset($_POST['formEnvoye']))
+				{
+					$this->wrongSignIn = true;
+				}
 			}
 		}
 	}

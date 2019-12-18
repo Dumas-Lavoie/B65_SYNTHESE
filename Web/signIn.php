@@ -19,6 +19,17 @@ if ($action->isLoggedIn)
 }
 ?>
 
+<?php 
+if ($action->wrongSignIn)
+{
+?>
+    <div class="alert alert-danger aPostule">
+	<strong>Erreur</strong> dans le formulaire d'inscription
+    </div>
+<?php
+}
+?>
+
 
 <body class="bg-light">
 
@@ -125,6 +136,7 @@ if ($action->isLoggedIn)
 								Le mot de passe est requis
 							</div>
 						</div>
+						<input style="display: none;" name="formEnvoye" value="1">
 						<button class="btn btn-primary btn-lg btn-block" type="submit">S'inscire</button>
 		</form>
 	</div>

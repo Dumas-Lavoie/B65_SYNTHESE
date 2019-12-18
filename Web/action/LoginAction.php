@@ -56,7 +56,7 @@ class LoginAction extends CommonAction
 			}
 
 			if (!isset($_COOKIE["remember-me"]) && isset($_POST["remember-me"])) {
-				setcookie("remember-me", $_POST["username"]);
+				setcookie("remember-me", $_POST["email"]);
 			} else {
 				$this->wrongLogin = true;
 			}
