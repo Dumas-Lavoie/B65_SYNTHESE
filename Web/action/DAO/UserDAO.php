@@ -42,6 +42,9 @@
 			$statement->bindParam(3, $user->email);
 			$statement->bindParam(4, $user->passwordHash);
 			$statement->execute();
+
+			// Retourne un utilisateur (pour aider si on désire créer un compte animateur par exemple)
+			return UserDAO::getUser($user->email);
 		}
 
 
@@ -73,9 +76,7 @@
 			
 			$connection = Connection::getConnection();
 			$statement = $connection->prepare("SELECT * from User where id = ?");
-			$statement->bindParam(1, $username);
 			$statement->setFetchMode(PDO::FETCH_ASSOC);
-			$statement->execute();
 			$statement->bindParam(1, $id);
 			$statement->execute();
 
@@ -85,5 +86,23 @@
 			}
 
 			return $user;
+		}
+
+
+		public static function accountExists ($email) {
+			$test = false;
+			
+			$connection = Connection::getConnection();
+			$statement = $connection->prepare("SELECT * from User where email = ?");
+			$statement->bindParam(1, $email);
+			$statement->setFetchMode(PDO::FETCH_ASSOC);
+			$statement->execute();
+
+
+			if ($row = $statement->fetch()) {
+				$test = true;
+			}
+
+			return $test;
 		}
 	}

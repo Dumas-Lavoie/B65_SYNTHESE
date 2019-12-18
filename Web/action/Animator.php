@@ -2,25 +2,31 @@
 
 class Animator {
     public $id;
+    public $fkUser;
     public $prenom;
     public $nom;
     public $gender;
     public $antecedents;
     public $birth;
-    public $profilePicture;
+    public $picture;
     public $desc;
-    public $adress;
+    public $adresse;
     public $postalCode;
+    public $telNumber;
 
-    function __construct($id, $fkUser, $nom, $grade, $adresse, $postalCode, $telNumber, $description) {
+    function __construct($id, $fkUser, $prenom, $nom, $genre, $antecedents, $birth, $picture, $desc, $adresse, $postalCode, $telNumber) {
         $this->id = $id;
         $this->fkUser = $fkUser;
+        $this->prenom = $prenom;
         $this->nom = $nom;
-        $this->grade = $grade;
+        $this->gender = $genre;
+        $this->antecedents = $antecedents;
+        $this->birth = $birth;
+        $this->picture = $picture;
+        $this->desc = $desc;
         $this->adresse = $adresse;
         $this->postalCode = $postalCode;
-        $this->telNumber = $telNumber;
-        $this->description = $description;
+        $this->telNumber  = $telNumber;
       }
       
 }

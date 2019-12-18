@@ -34,16 +34,18 @@ ENGINE = InnoDB;
 
 CREATE  TABLE IF NOT EXISTS Animateur (
   id INT  AUTO_INCREMENT PRIMARY KEY ,
+  fk_id_User INT,
   prenom VARCHAR(150) NOT NULL ,
   nom VARCHAR(150) NOT NULL ,
-  gender VARCHAR(1) ,
+  genre CHAR(1) ,
   antecedents CHAR(1) ,
-  date_of_birth DATE ,
+  birth DATE ,
   profilePicture VARCHAR(255),
   description VARCHAR(512),
   physical_address VARCHAR(255) ,
   postal_address VARCHAR(255) ,
-  contact_number VARCHAR(75)
+  contact_number VARCHAR(75),
+  FOREIGN KEY (fk_id_User) REFERENCES User(id)
   )
 ENGINE = InnoDB;
 
