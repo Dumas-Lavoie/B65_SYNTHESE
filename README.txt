@@ -1,3 +1,6 @@
+Note: pour exécuter ce projet, vous aurez besoin d'un serveur web comme apache pour exécuter le code php du back-end.
+
+
 Bienvenue dans le site Camp Job finder.
 
 Le but du site est de permettre à des animateurs de se trouver un camp où travailler, et à des camps de se trouver du personnel. 
